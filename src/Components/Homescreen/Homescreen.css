@@ -1,0 +1,56 @@
+.homescreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F7FB;
+    height: 100%;
+    width: 100%;
+}
+
+.homescreen-container-div {
+    text-align: center;
+}
+
+.homescreen-title {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #293264;
+}
+
+.homescreen-description {
+    font-size: 1.4rem;
+    color: #293264;
+    margin-bottom: 0;
+}
+
+.homescreen-form {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    color: #293264;
+    padding: 2rem;
+}
+
+.homescreen-labels {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.homescreen-dropdown {
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.start-btn {
+    background-color: #4D5B9E;
+    color: white;
+    padding: 1rem;
+    width: 12rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
