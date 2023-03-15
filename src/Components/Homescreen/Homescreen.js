@@ -1,6 +1,6 @@
 import "./Homescreen.css"
 
-export function Homescreen() {
+export function Homescreen(props) {
     return (
         <div className="homescreen">
             <div className="homescreen-container-div">
@@ -8,32 +8,7 @@ export function Homescreen() {
                 <p className="homescreen-description">
                     Answer the questions to test your knowledge
                 </p>
-                
-                <form className="homescreen-form">
-                    <label className="homescreen-labels" for="category">
-                        Category:
-                    </label>
-                    {/* Give Values to Options*/}
-                    <select className="homescreen-dropdown" id="category">
-                        <option>Any Category</option>
-                    </select>
-
-                    <label className="homescreen-labels" for="difficulty">
-                        Difficulty:
-                    </label>
-                    <select className="homescreen-dropdown" id="difficulty">
-                        <option>Any Difficulty</option>
-                    </select>
-
-                    <label className="homescreen-labels" for="type">
-                        Type of questions:
-                    </label>
-                    <select className="homescreen-dropdown" id="type">
-                        <option>Any Type</option>
-                    </select>
-                </form>
-
-                <button className="start-btn">Start quiz</button>
+                <button className="start-btn" onClick={props.handleClick}>Start quiz</button>
             </div>
         </div>
     )
