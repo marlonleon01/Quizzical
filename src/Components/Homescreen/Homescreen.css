@@ -1,10 +1,8 @@
 .homescreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #F5F7FB;
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .homescreen-container-div {
@@ -53,4 +51,34 @@
     border: none;
     border-radius: 1rem;
     font-size: 1.2rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 550px) {
+    .homescreen-title {
+        font-size: 2rem;
+    }
+    
+    .homescreen-description {
+        font-size: 1rem;
+    }
+
+    .homescreen-form {
+        display: block;
+        text-align: center;
+    }
+
+    .homescreen-labels {
+        font-size: 1rem;
+    }
+    
+    .homescreen-dropdown {
+        font-size: 1rem;
+    }
+
+    .start-btn {
+        width: 10rem;
+        font-size: 1rem;
+    }
 }
