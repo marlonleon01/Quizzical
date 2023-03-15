@@ -21,28 +21,6 @@
     margin-bottom: 0;
 }
 
-.homescreen-form {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 2fr;
-    color: #293264;
-    padding: 2rem;
-}
-
-.homescreen-labels {
-    margin: 0;
-    font-size: 1.2rem;
-    text-align: left;
-}
-
-.homescreen-dropdown {
-    margin: 0.5rem;
-    padding: 1rem;
-    width: 20rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-}
-
 .start-btn {
     background-color: #4D5B9E;
     color: white;
@@ -51,35 +29,5 @@
     border: none;
     border-radius: 1rem;
     font-size: 1.2rem;
-}
-
-/* Media Queries */
-
-@media screen and (max-width: 550px) {
-    .homescreen-title {
-        font-size: 2rem;
-    }
-    
-    .homescreen-description {
-        font-size: 1rem;
-    }
-
-    .homescreen-form {
-        display: block;
-        text-align: center;
-        padding: 1rem 0;
-    }
-
-    .homescreen-labels {
-        font-size: 1rem;
-    }
-    
-    .homescreen-dropdown {
-        font-size: 1rem;
-    }
-
-    .start-btn {
-        width: 10rem;
-        font-size: 1rem;
-    }
+    margin-top: 1rem;
 }
