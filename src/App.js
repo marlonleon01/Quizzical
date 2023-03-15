@@ -1,10 +1,12 @@
-import Homescreen from "./Components/Homescreen/Homescreen"
-import Quiz from "./Components/Quiz/Quiz"
+import { Homescreen } from "./Components/Homescreen/Homescreen"
+import { Quiz } from "./Components/Quiz/Quiz"
 
-export default function App() {
-    <main>
-        <Homescreen />
-        <Quiz />
-    </main>
+export function App() {
+    return (
+        <main>
+            <Homescreen />
+            <Quiz />
+        </main>
+    )
 }
 
