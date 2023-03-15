@@ -7,9 +7,9 @@ export function App() {
     return (
         <main>
             <img src={blob1} className="blob1"></img>
-            <img src={blob2} className="blob2"></img>
             <Homescreen />
             <Quiz />
+            <img src={blob2} className="blob2"></img>
         </main>
     )
 }
