@@ -13,14 +13,25 @@ export function App() {
         setStartQuiz(oldStartQuiz => !oldStartQuiz)
     }
     
+    function shuffle(array) {
+        const shuffeldArray = [...array]
+        for (let i = shuffeldArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1))
+            [shuffeldArray[i], shuffeldArray[j]] = [shuffeldArray[j], shuffeldArray[i]]
+        }
+        return shuffeldArray
+    }
+
     useEffect(() => {
         if(startQuiz) {
             fetch("https://opentdb.com/api.php?amount=5")
                 .then(res => res.json())
                 .then(data => setQuestions(data.results.map(data => {
+                    const options = shuffle([...data.incorrect_answer, data.correct_answer])
+                    
                     return({
                         question:data.question,
-                        options:data.incorrect_answer,
+                        options:options,
                         selectAnswer: undefined,
                         correctAnswer: data.correct_answer
                     })
@@ -35,7 +46,9 @@ export function App() {
             <img src={blob1} className="blob1"></img>
             {
                 startQuiz ? 
-                <Quiz /> : 
+                <Quiz 
+                    questions={questions}
+                /> : 
                 <Homescreen 
                     handleClick={getQuiz}
                 />
