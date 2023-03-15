@@ -14,21 +14,21 @@ export function Homescreen() {
                         Category:
                     </label>
                     {/* Give Values to Options*/}
-                    <select id="category">
+                    <select className="homescreen-dropdown" id="category">
                         <option>Any Category</option>
                     </select>
 
                     <label className="homescreen-labels" for="difficulty">
                         Difficulty:
                     </label>
-                    <select id="difficulty">
+                    <select className="homescreen-dropdown" id="difficulty">
                         <option>Any Difficulty</option>
                     </select>
-                    
+
                     <label className="homescreen-labels" for="type">
                         Type of questions:
                     </label>
-                    <select id="type">
+                    <select className="homescreen-dropdown" id="type">
                         <option>Any Type</option>
                     </select>
                 </form>
