@@ -31,7 +31,8 @@ function ContextProvider(props) {
     return (
         <Context.Provider value={{
             startQuiz,
-            getQuiz
+            getQuiz,
+            questions
         }}>
             {props.children}
         </Context.Provider>
