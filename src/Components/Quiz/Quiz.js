@@ -1,21 +1,21 @@
 import "./Quiz.css"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { Context } from "../../Context"
 
 export function Quiz() {
-const {startQuiz, questions} = useContext(Context)
+    const {startQuiz, questions} = useContext(Context)
 
-function renderAnswers(question) {
-    const incorrectAnswers = question.incorrectAnswer
-    const randomIndex = Math.floor(Math.random() * (incorrectAnswers.length + 1))
-    incorrectAnswers.splice(randomIndex, 0, question.correctAnswer)
+    function renderAnswers(question) {
+        const incorrectAnswers = question.incorrectAnswer
+        const randomIndex = Math.floor(Math.random() * (incorrectAnswers.length + 1))
+        incorrectAnswers.splice(randomIndex, 0, question.correctAnswer)
 
-    return incorrectAnswers.map((answer, answerIndex) => (
-        <button key={answerIndex} className="quiz-answer-btn">
-            {answer}
-        </button>
-    ))
-}
+        return incorrectAnswers.map((answer, answerIndex) => (
+            <button key={answerIndex} className="quiz-answer-btn">
+                {answer}
+            </button>
+        ))
+    }
 
     return (
         <div className="quiz-container">
@@ -29,7 +29,9 @@ function renderAnswers(question) {
                             </div>
                         </div>
                     ))}
-                    <button className="check-answers-btn">Check Answers</button>
+                    <button className="check-answers-btn">
+                        Check Answers
+                    </button>
                 </>
             ) : <div></div>
         }
