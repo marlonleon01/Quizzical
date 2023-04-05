@@ -21,7 +21,6 @@ function ContextProvider(props) {
     return (
         <Context.Provider value={{
             startQuiz,
-            questions,
             getQuiz
         }}>
             {props.children}
