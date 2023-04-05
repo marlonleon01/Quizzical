@@ -1,4 +1,4 @@
-import {useEffect, useState, useContext} from "react"
+import { useContext } from "react"
 import { Homescreen } from "./Components/Homescreen/Homescreen"
 import { Quiz } from "./Components/Quiz/Quiz"
 import { Context } from "./Context"
