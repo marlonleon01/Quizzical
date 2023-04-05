@@ -1,4 +1,5 @@
 import {createContext, useState, useEffect} from "react"
+import { decode } from "html-entities"
 
 const Context = createContext()
 
@@ -18,9 +19,9 @@ function ContextProvider(props) {
                     const quizData = data.results
                     const quizDataArr = quizData.map(quiz => {
                         return {
-                            question: quiz.question,
-                            correctAnswer: quiz.correct_answer,
-                            incorrectAnswer: quiz.incorrect_answers
+                            question: decode(quiz.question),
+                            correctAnswer: decode(quiz.correct_answer),
+                            incorrectAnswer: quiz.incorrect_answers.map(answer => decode(answer))
                         }
                     })
                     setQuestions(quizDataArr)
