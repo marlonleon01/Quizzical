@@ -1,9 +1,6 @@
 import "./Quiz.css"
 
 export function Quiz() {
-    //Need to create test with data from api
-
-    
     return (
         <div className="quiz-container">
             <div className="quiz-question-container">
