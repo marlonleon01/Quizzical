@@ -12,12 +12,22 @@ function ContextProvider(props) {
 
     useEffect(() => {
         if(startQuiz) {
-            fetch("https://opentdb.com/api.php?amount=5")
+            fetch("https://opentdb.com/api.php?amount=5&type=multiple")
                 .then(res => res.json())
-                .then(data => console.log(data))
+                .then(data => {
+                    const quizData = data.results
+                    const quizDataArr = quizData.map(quiz => {
+                        return {
+                            question: quiz.question,
+                            correctAnswer: quiz.correct_answer,
+                            incorrectAnswer: quiz.incorrect_answers
+                        }
+                    })
+                    setQuestions(quizDataArr)
+                })
         }
     },[startQuiz])
-    
+
     return (
         <Context.Provider value={{
             startQuiz,
