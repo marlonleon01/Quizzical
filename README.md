@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-##Still being worked on not finished
+## Still being worked on not finished
 
 ## Description
 -I created this while following the react basics course from scrimba it was the final solo project   
