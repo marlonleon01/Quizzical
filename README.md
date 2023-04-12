@@ -3,8 +3,8 @@
 ##Still being worked on not finished
 
 ## Description
--I created this while following the react basics course from scrimba it was the final solo project 
--Its main purpose was to practice everything learned throughout the course such as fetching data from apis, using state, using useEffect, 
+-I created this while following the react basics course from scrimba it was the final solo project   
+-Its main purpose was to practice everything learned throughout the course such as fetching data from apis, using state, using useEffect,   
 and I event am using context since I learned how to use it shortly after  
 
 ## Required Files
